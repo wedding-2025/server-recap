@@ -1,7 +1,7 @@
 import Video from '../models/Video.js';
 
 export const createVideo = async (req, res, next) => {
-  const { imgUrl } = req.body;
+  const { imgUrl, category } = req.body; // remove category if there's an error
 
   if (!imgUrl) {
     res.status(400); 
@@ -13,6 +13,7 @@ export const createVideo = async (req, res, next) => {
   try {
     const upload_url = new Video({
       imgUrl,
+      category, // remove category if there's an error
       // videoUrl,
     });
 

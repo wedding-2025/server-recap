@@ -56,3 +56,4 @@ async function listAllDocuments() {
 
 // Call the function to list all documents
 listAllDocuments();
+// deleteAllDocuments();

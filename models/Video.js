@@ -4,7 +4,11 @@ const videoSchema = new mongoose.Schema(
   {
     imgUrl: {
       type: String,
-      // required: true,
+      required: true,
+    },
+    category: { // removee the category if there's an error
+      type: String,
+      required: true,
     },
     videoUrl: {
       type: String,
